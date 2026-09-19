@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ArrowUpRight, Clock3, MapPin, Star, Store } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
+import { Mascot } from "@/components/Mascot";
 import { Heart, InstagramIcon } from "@/components/Doodles";
 import { DELIVERY, IG_URL, QUOTE_URL, REVIEWS_URL } from "@/lib/data";
 
@@ -102,10 +103,9 @@ export default function ContactPage() {
         <Reveal className="mt-12">
           <div className="grid gap-8 overflow-hidden rounded-[2.5rem] border border-lav-line bg-white shadow-soft lg:grid-cols-2">
             <div className="relative min-h-72 overflow-hidden">
-              <Image
-                src="/kekki-mascot.png"
-                alt="Kekki mascot welcoming you to the Lavender Lane studio"
+              <Mascot
                 fill
+                alt="Kekki mascot welcoming you to the Lavender Lane studio"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-grape-ink/40 to-transparent" />

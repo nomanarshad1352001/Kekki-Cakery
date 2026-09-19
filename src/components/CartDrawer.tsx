@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, Minus, Plus, ShoppingBag, Trash2, X } from "lucide-react";
 import { useCart } from "@/lib/cart";
 import { DELIVERY, money, QUOTE_URL } from "@/lib/data";
+import { Mascot } from "@/components/Mascot";
 import { formatShort, SLOTS } from "@/lib/availability";
 
 export function CartDrawer() {
@@ -51,11 +52,9 @@ export function CartDrawer() {
 
             {items.length === 0 ? (
               <div className="flex flex-1 flex-col items-center justify-center gap-4 px-8 text-center">
-                <Image
-                  src="/kekki-mascot.png"
+                <Mascot
+                  size={140}
                   alt="Kekki mascot"
-                  width={140}
-                  height={140}
                   className="size-36 animate-float rounded-full object-cover shadow-soft"
                 />
                 <p className="font-display text-2xl font-black text-ink">

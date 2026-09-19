@@ -11,6 +11,7 @@ import {
   Wheat,
 } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
+import { Mascot } from "@/components/Mascot";
 import { ProductCard } from "@/components/ProductCard";
 import { Testimonials } from "@/components/Testimonials";
 import { Hero } from "@/components/Hero";
@@ -315,11 +316,9 @@ export default function HomePage() {
 
               <div className="relative mx-auto shrink-0">
                 <div className="absolute inset-0 animate-spin-slow rounded-full border-2 border-dashed border-white/40" />
-                <Image
-                  src="/kekki-mascot.png"
+                <Mascot
+                  size={220}
                   alt="Kekki mascot waving hello"
-                  width={220}
-                  height={220}
                   className="size-44 animate-float rounded-full border-4 border-white/40 object-cover shadow-lift sm:size-56"
                 />
                 <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-blush px-4 py-1.5 text-[0.65rem] font-black tracking-widest text-grape-ink whitespace-nowrap uppercase">

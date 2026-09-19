@@ -26,6 +26,7 @@ import { useCart } from "@/lib/cart";
 import { DELIVERY, findDiscount, money, type Discount } from "@/lib/data";
 import { formatLong, SLOTS } from "@/lib/availability";
 import { DatePicker, type DateSlot } from "@/components/DatePicker";
+import { Mascot } from "@/components/Mascot";
 import clsx from "clsx";
 
 type Placed = {
@@ -240,11 +241,9 @@ export function CheckoutFlow() {
   if (hydrated && items.length === 0) {
     return (
       <section className="mx-auto flex max-w-2xl flex-col items-center px-4 pt-44 pb-28 text-center sm:px-6">
-        <Image
-          src="/kekki-mascot.png"
+        <Mascot
+          size={160}
           alt="Kekki mascot"
-          width={160}
-          height={160}
           className="size-40 animate-float rounded-full object-cover shadow-lift"
         />
         <h1 className="font-display mt-8 text-4xl font-black text-ink">Nothing to check out… yet</h1>

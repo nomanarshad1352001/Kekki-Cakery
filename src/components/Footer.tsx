@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, MapPin, Clock3 } from "lucide-react";
 import { Heart, InstagramIcon, Logo, Sparkle } from "@/components/Doodles";
+import { Mascot } from "@/components/Mascot";
 import { DELIVERY, IG_URL, QUOTE_URL, REVIEWS_URL } from "@/lib/data";
 
 const SHOP_LINKS = [
@@ -33,11 +33,9 @@ export function Footer() {
           <div className="flex items-center gap-6">
             <div className="relative hidden shrink-0 sm:block">
               <div className="absolute inset-0 animate-spin-slow rounded-full border-2 border-dashed border-lav/50" />
-              <Image
-                src="/kekki-mascot.png"
+              <Mascot
+                size={96}
                 alt="Kekki the cake mascot waving hello"
-                width={96}
-                height={96}
                 className="size-24 animate-float rounded-full object-cover"
               />
             </div>

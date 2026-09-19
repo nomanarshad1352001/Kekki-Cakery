@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ArrowUpRight, BadgeCheck, CakeSlice, HandHeart, Leaf } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
+import { Mascot } from "@/components/Mascot";
 import { Heart, HeartOutline, Sparkle } from "@/components/Doodles";
 import { QUOTE_URL, px } from "@/lib/data";
 
@@ -85,11 +86,9 @@ export default function AboutPage() {
                 </div>
               </div>
               <div className="absolute -bottom-6 left-1/2 flex -translate-x-1/2 items-center gap-3 rounded-full border border-lav-line bg-white px-6 py-3 shadow-lift">
-                <Image
-                  src="/kekki-mascot.png"
+                <Mascot
+                  size={40}
                   alt="Kekki mascot"
-                  width={40}
-                  height={40}
                   className="size-10 rounded-full object-cover"
                 />
                 <p className="text-xs font-black tracking-wide whitespace-nowrap text-ink uppercase">

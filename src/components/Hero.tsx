@@ -1,11 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, ArrowUpRight, BadgeCheck, ChevronDown, Star } from "lucide-react";
 import { Heart, HeartOutline, Sparkle } from "@/components/Doodles";
+import { Mascot } from "@/components/Mascot";
 import { QUOTE_URL } from "@/lib/data";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -171,11 +171,9 @@ export function Hero() {
         </div>
         <div className="relative">
           <div className="absolute inset-0 animate-spin-slow rounded-full border-2 border-dashed border-lav-deep/40" />
-          <Image
-            src="/kekki-mascot.png"
+          <Mascot
+            size={128}
             alt="Kekki, the Kekki Cakery mascot"
-            width={128}
-            height={128}
             className="size-32 animate-float-slow rounded-full object-cover shadow-lift"
           />
         </div>
