@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #fdfaf4;
+  --color-cream-2: #fbf3e8;
+  --color-cream-3: #f6ebda;
+  --color-ink: #2f2452;
+  --color-grape: #4a3a80;
+  --color-grape-deep: #221a44;
+  --color-grape-ink: #1a1336;
+  --color-lav: #c6b5ef;
+  --color-lav-deep: #7a5cd6;
+  --color-lav-dark: #6243be;
+  --color-lav-soft: #f4effd;
+  --color-lav-line: #e8dff8;
+  --color-blue: #aac4ee;
+  --color-blue-deep: #4a6fc0;
+  --color-blue-soft: #edf3fd;
+  --color-blush: #f8d3dd;
+  --color-blush-deep: #e582ab;
+  --color-gold: #c9a24b;
+  --color-mint: #c7e8d6;
+
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-sans: "Outfit", "Helvetica Neue", sans-serif;
+
+  --shadow-soft: 0 10px 40px -12px rgba(82, 68, 140, 0.18);
+  --shadow-lift: 0 24px 60px -16px rgba(82, 68, 140, 0.28);
+  --shadow-glow: 0 0 0 6px rgba(183, 165, 230, 0.22);
+
+  --animate-marquee: marquee 30s linear infinite;
+  --animate-marquee-slow: marquee 48s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float 9s ease-in-out infinite;
+  --animate-spin-slow: spin 14s linear infinite;
+  --animate-wiggle: wiggle 5s ease-in-out infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(-2deg); }
+    50% { transform: translateY(-14px) rotate(2deg); }
+  }
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(-6deg); }
+    50% { transform: rotate(6deg); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-cream text-ink font-sans antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-lav);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-lav-soft);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-lav);
+  border-radius: 999px;
+  border: 2px solid var(--color-lav-soft);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-lav-deep);
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+}
+
+/* Squiggle underline for headline accents */
+.squiggle {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='12' viewBox='0 0 120 12'%3E%3Cpath d='M2 8 Q 12 2 22 8 T 42 8 T 62 8 T 82 8 T 102 8 T 122 8' fill='none' stroke='%23e285af' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 120px 10px;
+  padding-bottom: 14px;
+}
+
+/* Dotted heart paper texture for cream sections */
+.paper-dots {
+  background-image: radial-gradient(rgba(122, 92, 214, 0.10) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+}
+
+.paper-dots-strong {
+  background-image: radial-gradient(rgba(122, 92, 214, 0.16) 1.4px, transparent 1.4px);
+  background-size: 20px 20px;
+}
+
+/* Hide scrollbars for horizontal rails */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Luxe outlined text */
+.text-outline {
+  -webkit-text-stroke: 1.5px rgba(82, 68, 140, 0.45);
+  color: transparent;
+}
